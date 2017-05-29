@@ -1,11 +1,8 @@
 const express = require('express')
 
+require('dotenv').load()
+
 const app = express()
-
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
 const PORT = process.env.PORT
 
 app.use(express.static('public'))
